@@ -1,0 +1,108 @@
+extends layout
+
+block content
+    body
+    .m-4
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container-fluid
+          a.navbar-brand(href='#')
+           img(src='/images/montreal-canadiens.svg' height='45' alt='All About Habs')
+          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse')
+            span.navbar-toggler-icon
+          #navbarCollapse.collapse.navbar-collapse
+            .navbar-nav
+              a.nav-item.nav-link.active(href='/') Roster Stats
+              a.nav-item.nav-link.active(href='/team') Team Stats
+            .navbar-nav.ms-auto
+      ul.list-group
+      - var num = length
+      table.table.table-striped
+        thead
+              tr
+                th(scope='col') Stat
+                th(scope='col') Number
+            tbody
+              tr
+                th(scope='row') Games Played
+                td #{gamesPlayed}
+              tr
+                th(scope='row') Wins
+                td #{wins}
+              tr
+                th(scope='row') loses
+                td #{loses}
+              tr
+                th(scope='row') otloss
+                td #{otloss}
+              tr
+                th(scope='row') pts
+                td #{pts}
+              tr
+                th(scope='row') ptPctg
+                td #{ptPctg}
+              tr
+                th(scope='row') goalsPerGame
+                td #{goalsPerGame}
+              tr
+                th(scope='row') goalsAgainstPerGame
+                td #{goalsAgainstPerGame}
+              tr
+                th(scope='row') evGGARatio
+                td #{evGGARatio}
+              tr
+                th(scope='row') powerPlayPercentage
+                td #{powerPlayPercentage}
+              tr
+                th(scope='row') powerPlayGoals
+                td #{powerPlayGoals}
+              tr
+                th(scope='row') powerPlayGoalsAgainst
+                td #{powerPlayGoalsAgainst}
+              tr
+                th(scope='row') powerPlayOpportunities
+                td #{powerPlayOpportunities}
+              tr
+                th(scope='row') penaltyKillPercentage
+                td #{penaltyKillPercentage}
+              tr
+                th(scope='row') savePctg
+                td #{savePctg}
+              tr
+                th(scope='row') shootingPctg
+                td #{shootingPctg}
+              tr
+                th(scope='row') faceOffWinPercentage
+                td #{faceOffWinPercentage}
+              tr
+                th(scope='row') faceOffsLost
+                td #{faceOffsLost}
+              tr
+                th(scope='row') faceOffsWon
+                td #{faceOffsWon}
+              tr
+                th(scope='row') faceOffsTaken
+                td #{faceOffsTaken}
+              tr
+                th(scope='row') winOutshotByOpp
+                td #{winOutshotByOpp}
+              tr
+                th(scope='row') winOutshootOpp
+                td #{winOutshootOpp}
+              tr
+                th(scope='row') winLeadSecondPer
+                td #{winLeadSecondPer}
+              tr
+                th(scope='row') winLeadFirstPer
+                td #{winLeadFirstPer}
+              tr
+                th(scope='row') winOppScoreFirst
+                td #{winOppScoreFirst}
+              tr
+                th(scope='row') winScoreFirst
+                td #{winScoreFirst}
+              tr
+                th(scope='row') shotsPerGame
+                td #{shotsPerGame}
+              tr
+                th(scope='row') shotsAllowed
+                td #{shotsAllowed}

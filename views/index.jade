@@ -11,18 +11,16 @@ block content
             span.navbar-toggler-icon
           #navbarCollapse.collapse.navbar-collapse
             .navbar-nav
-              a.nav-item.nav-link.active(href='#') Home
-              a.nav-item.nav-link(href='#') Profile
-              a.nav-item.nav-link(href='#') Messages
-              a.nav-item.nav-link.disabled(href='#' tabindex='-1') Reports
+              a.nav-item.nav-link.active(href='/') Roster Stats
+              a.nav-item.nav-link(href='/team') Team Stats
             .navbar-nav.ms-auto
-              a.nav-item.nav-link(href='#') Login
       ul.list-group
       - var num = length
       table.table
         thead
           tr
             th(scope='col') #
+            th(scope='col') Photo
             th(scope='col') First
             th(scope='col') Jersey Number
             th(scope='col') Position
@@ -52,10 +50,11 @@ block content
         - for (var i = 0; i < num; ++i) {
           tr
             th(scope='row') #{i}
+            td 
+              img(src='#{playerPhoto[i]}' alt='#{fname[i].person.fullName}')
             td #{fname[i].person.fullName}
             td #{fname[i].jerseyNumber}
             td #{fname[i].position.code}
-            td #{playerGoals[i]}
         -}
         
 
